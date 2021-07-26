@@ -101,6 +101,18 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "autoShutdownStatus": {
+      "type": "string",
+      "defaultValue": "Enabled"
+    },
+    "autoShutdownTime": {
+      "type": "string",
+      "defaultValue": "18:00"
+    },
+    "autoShutdownTimeZone": {
+      "type": "string",
+      "defaultValue": "UTC"
     }
   },
   "functions": [],
