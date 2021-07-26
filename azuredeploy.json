@@ -256,7 +256,6 @@
               "enabled": true,
               "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))).primaryEndpoints.blob]"
             }
-          }
         },
         "dependsOn": [
           "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]",
