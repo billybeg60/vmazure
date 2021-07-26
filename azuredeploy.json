@@ -14,6 +14,21 @@
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
+      },
+     "vmName": {
+      "type": "string",
+      "defaultValue": "simple-vm",
+      "metadata": {
+        "description": "Name of the virtual machine."
+      }
+    }
+     },
+      "adminPassword": {
+      "type": "secureString",
+      "minLength": 12,
+      "metadata": {
+        "description": "Password for the Virtual Machine."
+      }
     },
      "autoShutdownStatus": {
             "type": "string",
@@ -27,13 +42,7 @@
                 "type": "string",
       "defaultValue": "UTC"
         },
-    "adminPassword": {
-      "type": "secureString",
-      "minLength": 12,
-      "metadata": {
-        "description": "Password for the Virtual Machine."
-      }
-    },
+    
     "dnsLabelPrefix": {
       "type": "string",
       "defaultValue": "[toLower(format('{0}-{1}', parameters('vmName'), uniqueString(resourceGroup().id, parameters('vmName'))))]",
@@ -107,14 +116,6 @@
         "description": "Location for all resources."
       }
     },
-    "vmName": {
-      "type": "string",
-      "defaultValue": "simple-vm",
-      "metadata": {
-        "description": "Name of the virtual machine."
-      }
-    }
-  },
   "functions": [],
   "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
