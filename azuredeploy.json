@@ -93,8 +93,7 @@
     "location": {
       "type": "string",
       "defaultValue": "WestEurope",
-      "metadata": {"description": "Location for all resources."]
-      }
+      "metadata": {"description": "Location for all resources."}
     },
   "functions": [],
   "variables": {
@@ -103,7 +102,7 @@
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "[format('{0}-{1}',"[parameters('vmName'),"MyVNET"),
     "networkSecurityGroupName": "default-NSG"
   },
   "resources": [
