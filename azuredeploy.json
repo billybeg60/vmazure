@@ -118,7 +118,7 @@
   "functions": [],
   "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
-    "nicName": "myVMNic",
+    "nicName": "[parameters('vmName')]",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "[parameters('vmName')]",
     "subnetPrefix": "10.0.0.0/24",
