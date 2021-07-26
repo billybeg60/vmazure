@@ -95,13 +95,6 @@
         "description": "Size of the virtual machine."
       }
     },
-    "location": {
-      "type": "string",
-      "defaultValue": "[resourceGroup().location]",
-      "metadata": {
-        "description": "Location for all resources."
-      }
-    },
     "autoShutdownStatus": {
       "type": "string",
       "defaultValue": "Enabled"
@@ -113,6 +106,13 @@
     "autoShutdownTimeZone": {
       "type": "string",
       "defaultValue": "UTC"
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
     }
   },
   "functions": [],
