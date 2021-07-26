@@ -60,9 +60,9 @@
     },
     "OSVersion": {
       "type": "string",
-      "defaultValue": "MicrosoftWindowsDesktop/Windows-10",
+      "defaultValue": "Windows-10",
       "allowedValues": [
-        "2008-R2-SP1",
+        "Windows-10",
         "2012-Datacenter",
         "2012-R2-Datacenter",
         "2016-Nano-Server",
