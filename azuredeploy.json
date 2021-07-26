@@ -15,6 +15,18 @@
         "description": "Username for the Virtual Machine."
       }
     },
+     "autoShutdownStatus": {
+            "type": "string",
+      "defaultValue": "Enabled"
+        },
+        "autoShutdownTime": {
+                "type": "string",
+      "defaultValue":"18:00"
+        },
+        "autoShutdownTimeZone": {
+                "type": "string",
+      "defaultValue": "UTC"
+        },
     "adminPassword": {
       "type": "secureString",
       "minLength": 12,
