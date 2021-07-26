@@ -104,7 +104,7 @@
       "subnetName": "Subnet",
       "subnetPrefix": "10.0.0.0/24",
       "virtualNetworkName": "[parameters('vmName')]",
-        "networkSecurityGroupName": "default-NSG"
+      "networkSecurityGroupName": "default-NSG"
     },
     "resources": [
       {
@@ -256,17 +256,13 @@
               "enabled": true,
               "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))).primaryEndpoints.blob]"
             }
+          }
         },
         "dependsOn": [
           "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]",
           "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
         ]
       }
-    ],
-    "outputs": {
-      "hostname": {
-        "type": "string",
-        "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIpName'))).dnsSettings.fqdn]"
-      }
-    }
+    ]
   }
+}
